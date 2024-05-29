@@ -1,4 +1,4 @@
-# Red Efectiva - Prueba Técnica - CRUD Customer - Frontend
+# Red Efectiva - Prueba Técnica #2 - CRUD Customer - Frontend
 
 Este proyecto es únicamente el Frontend de la prueba #2 del test de Red Efectiva. Pretende ser el gestionador visual para el API que contiene un CRUD de Clientes, se debe de coorrer el proyecto Backend ([crud-customer-test-backend](https://github.com/argelalfaro95/crud-customer-test-backend/tree/main)) antes para poder utilizar este. 
 
@@ -6,6 +6,8 @@ Este proyecto es únicamente el Frontend de la prueba #2 del test de Red Efectiv
 ## Requerimientos
 
 `NodeJS 20+`: [Descargar versión v20.14.0](https://nodejs.org/dist/v20.14.0/node-v20.14.0-x64.msi)
+
+`Git`: [Descargar versión v2.45+](https://git-scm.com/downloads)
 
 ## Pasos a seguir
 
