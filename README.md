@@ -43,12 +43,12 @@ En caso de necesitar cambiar el url del endpoint del backend, se deberá de modi
 
 ### Formulario principal
 
-![Listado de clientes](/resource/crud-frontend-customer-01.png)
+![Listado de clientes](/public/resource/crud-frontend-customer-01.png)
 
 ### Formulario creación
 
-![Creación de cliente](/resource/crud-frontend-customer-02.png)
+![Creación de cliente](/public/resource/crud-frontend-customer-02.png)
 
 ### Formulario edición
 
-![Creación de cliente](/resource/crud-frontend-customer-03.png)
+![Creación de cliente](/public/resource/crud-frontend-customer-03.png)
