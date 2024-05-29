@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import axios from 'axios';
 
-const CustomerForm = ({ fetchCustomers }) => {
+const CustomerForm = ({ fetchCustomers, show, setShow}) => {
   const formRef = useRef(null);
 
   const onSubmit = async (event) => {
@@ -16,6 +16,7 @@ const CustomerForm = ({ fetchCustomers }) => {
       await axios.post(`${process.env.REACT_APP_API_URL}/Customer`, data);
       fetchCustomers();
       formRef.current.reset(); // Función para limpiar los campos luego de guardar.
+      setShow(false);
     } catch (error) {
       console.error('Error al crear el cliente:', error);
     }
@@ -58,6 +59,9 @@ const CustomerForm = ({ fetchCustomers }) => {
           <input type="date" name="birthday" required />
         </div>
         <button type="submit">Crear</button>
+        <button onClick={() => setShow(false)} 
+          style={{ backgroundColor: 'red', color: 'white' }}
+        >Cancelar</button>
       </form>
     </div>
   );

@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-const CustomerList = ({ customers, fetchCustomers }) => {
+const CustomerList = ({ customers, fetchCustomers, show, setShow }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [editingCustomer, setEditingCustomer] = useState(null);
   const [formData, setFormData] = useState({
@@ -81,12 +81,26 @@ const CustomerList = ({ customers, fetchCustomers }) => {
   return (
     <div className="customer-list">
       <h2>Listado de Clientes</h2>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        marginBottom: '10px'
+      }}>
       <input
         type="text"
         placeholder="Buscar cliente..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        style={{
+  
+          padding: '5px', 
+        
+        }}
       />
+
+      <button onClick={() => setShow(!show)}>{show ? 'Cerrar' : 'Crear Nuevo Cliente'}</button>
+      </div>
       <table>
         <thead>
           <tr>
@@ -117,8 +131,22 @@ const CustomerList = ({ customers, fetchCustomers }) => {
               <td>{customer.createdDate}</td>
               <td>{customer.lastModifiedDate}</td>
               <td className="button-group">
-                <button onClick={() => handleEdit(customer)}>Editar</button>
-                <button onClick={() => deleteCustomer(customer.id)}>Eliminar</button>
+                <button onClick={() => handleEdit(customer)}
+                  style={{
+                    backgroundColor: 'skyblue',
+                    color: 'white',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                >Editar</button>
+                <button onClick={() => deleteCustomer(customer.id)}
+                  style={{
+                    backgroundColor: 'red',
+                    color: 'white',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                >Eliminar</button>
               </td>
             </tr>
           ))}
@@ -168,8 +196,16 @@ const CustomerList = ({ customers, fetchCustomers }) => {
                 <input type="date" name="birthday" value={formData.birthday} onChange={handleInputChange} required />
               </div>
               <div className="form-buttons">
-                <button type="button" onClick={handleCloseEdit}>Cancelar</button>
                 <button type="submit">Guardar Cambios</button>
+                <button type="button" onClick={handleCloseEdit}
+                  style={{ 
+                    backgroundColor: 'red', 
+                    color: 'white', 
+                    border: 'none', 
+                    cursor: 'pointer' 
+                  }}
+                >Cancelar</button>
+
               </div>
             </form>
           </div>

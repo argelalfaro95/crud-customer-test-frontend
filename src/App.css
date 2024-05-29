@@ -25,14 +25,15 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
+
 }
 
-input {
+/* input {
   margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
+} */
 
 button {
   padding: 10px;
@@ -141,6 +142,8 @@ li button:hover {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
+  
+
 }
 
 .customer-form h2 {
@@ -150,27 +153,28 @@ li button:hover {
 
 .customer-form .form-group {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .customer-form .form-group label {
-  display: block;
   margin-bottom: 5px;
 }
 
-.customer-form .form-group input,
-.customer-form .form-group select,
-.customer-form .form-group textarea {
-  width: 100%;
+.customer-form  .form-group  input,
+.customer-form  .form-group  select,
+.customer-form  .form-group  textarea {
+  width:96%;
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.customer-form .form-buttons {
-  display: flex;
-  justify-content: space-between;
+.customer-form button {
+  display: block;
+  width: 100% ;
 }
+
 
 .customer-form button {
   padding: 8px 16px;
